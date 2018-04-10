@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Share</title>
+  <link rel="stylesheet" href="docs/index.css">
+</head>
+<body>
+  <h1>Share</h1>
+  <span class="share">
+    <button type="button" class="share-weixin">
+      微信
+    </button>
+    <button type="button" class="share-weibo">
+      新浪微博
+    </button>
+    <button type="button" class="share-friend">
+      朋友圈
+    </button>
+    <button type="button" class="share-qzone">
+      QQ空间
+    </button>
+    <button type="button" class="share-qq">
+      QQ好友
+    </button>
+  </span>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="dist/share.js"></script>
+  <script>
+    $('.share').share({
+      sharetitle: document.title,
+      shareUrl: 'http://www.baidu.com',
+      pic: 'http://www3.autoimg.cn/newsdfs/g12/M12/B4/C9/400x300_0_autohomecar__wKjBy1g_CemAHZEvAAGyJet9vxY587.JPG',
+      summary: '分享给的分享描述',
+    });
+  </script>
+</body>
+</html>
