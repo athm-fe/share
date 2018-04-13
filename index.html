@@ -8,8 +8,8 @@
 </head>
 <body>
   <h1>Share</h1>
-  <span class="share">
-    <button type="button" class="share-weixin">
+  <div class="share">
+    <button type="button" class="share-wechat">
       微信
     </button>
     <button type="button" class="share-weibo">
@@ -24,7 +24,7 @@
     <button type="button" class="share-qq">
       QQ好友
     </button>
-  </span>
+  </div>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -33,10 +33,10 @@
   <script src="dist/share.js"></script>
   <script>
     $('.share').share({
-      sharetitle: document.title,
-      shareUrl: 'http://www.baidu.com',
-      pic: 'http://www3.autoimg.cn/newsdfs/g12/M12/B4/C9/400x300_0_autohomecar__wKjBy1g_CemAHZEvAAGyJet9vxY587.JPG',
-      summary: '分享给的分享描述',
+      shareTitle: '分享标题',
+      shareUrl: 'https://m.autohome.com.cn/',
+      sharePic: 'https://www3.autoimg.cn/newsdfs/g12/M12/B4/C9/400x300_0_autohomecar__wKjBy1g_CemAHZEvAAGyJet9vxY587.JPG',
+      shareSummary: '分享描述',
     });
   </script>
 </body>
