@@ -1,5 +1,5 @@
 /*!
- * @autofe/share v0.1.0
+ * @autofe/share v0.1.1
  * (c) 2018 Autohome Inc.
  * Released under the MIT License.
  */
@@ -20,6 +20,7 @@ $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 var NAME = 'share';
 var DATA_KEY = 'fe.share';
 var JQUERY_NO_CONFLICT = $.fn[NAME];
+var CLICK_EVENT = 'click';
 
 var strWindowFeatures = '\n  toolbar=0,\n  menubar=0,\n  status=0,\n  location=1,\n  resizable=1,\n  width=720,\n  height=540,\n  left=' + (window.screen.width - 720) / 2 + ',\n  top=' + (window.screen.height - 540) / 2 + '\n';
 
@@ -46,23 +47,15 @@ function Share(elem, options) {
     _this.$wechatBox && _this.$wechatBox.hide();
   });
 
-  this.$elem.on('click', '.share-wechat', function () {
+  this.$elem.on(CLICK_EVENT, '.share-wechat', function () {
     _this.shareToWechat();
-  });
-
-  this.$elem.on('click', '.share-friend', function () {
+  }).on(CLICK_EVENT, '.share-friend', function () {
     _this.shareToWechat();
-  });
-
-  this.$elem.on('click', '.share-weibo', function () {
+  }).on(CLICK_EVENT, '.share-weibo', function () {
     _this.shareToWeibo();
-  });
-
-  this.$elem.on('click', '.share-qzone', function () {
+  }).on(CLICK_EVENT, '.share-qzone', function () {
     _this.shareToQzone();
-  });
-
-  this.$elem.on('click', '.share-qq', function () {
+  }).on(CLICK_EVENT, '.share-qq', function () {
     _this.shareToQQ();
   });
 }
